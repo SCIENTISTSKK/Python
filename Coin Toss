@@ -25,6 +25,6 @@ def Comb(val):
     return val
 
 
-N = int(input())
+N = int(input()) # Number of Coins
 for c in Comb([]):
     print(c)
