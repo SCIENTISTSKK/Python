@@ -35,8 +35,8 @@ def Calculation():
     return Sol
 
 
-N = int(input())
-C = int(input())
-arr = [int(input()) for x in range(N)]
+N = int(input()) # Number of Cans
+C = int(input()) # Tank Capacity
+arr = [int(input()) for x in range(N)] # Each Can Capacity
 Com = Comb([])
 print(Calculation())
