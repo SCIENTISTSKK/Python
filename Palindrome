@@ -1,0 +1,44 @@
+# string = input()
+# print(string == string[::-1])
+
+
+# def Is_Palindrome(ref,i):
+#     if i == int(len(ref)/2):
+#         return "yes"
+#     elif ref[i] == ref[len(ref)-i-1]:
+#         return Is_Palindrome(ref, i + 1)
+#     else:
+#         return "no"
+#
+# string = input()
+# print(Is_Palindrome(string, 0))
+
+
+# string = input()
+# for i in range(0, int(len(string) / 2)):
+#     if string[i] != string[len(string)-i-1]:
+#         print("no")
+#         break
+# else:
+#     print("yes")
+
+"""Reversing the given input"""
+# def Reverse(n, i):
+#     if len(n) > i:
+#         Reverse(n, i + 1)
+#     else:
+#         return
+#     print(n[i],end="")
+#
+# n = input()
+# Reverse(list(n), 0)
+
+# def Reverse(n, i):
+#     if i>0:
+#         Reverse(n, i - 1)
+#     else:
+#         return
+#     print(n[len(n) - i],end="")
+#
+# n = input()
+# Reverse(list(n), len(n))
