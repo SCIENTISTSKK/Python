@@ -1,0 +1,16 @@
+def nCr(lt,n):
+    if n == 0:
+        return[[]]
+    l = []
+    for i in range(len(lt)):
+        m = lt[i]
+        rem = lt[i+1:]
+        for C in nCr(rem,n-1):
+            l.append([m]+C)
+    return l
+
+
+data = list(input())
+choice = int(input())
+for c in nCr(data,choice):
+    print(c)
