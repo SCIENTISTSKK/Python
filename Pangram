@@ -1,0 +1,7 @@
+s = input().lower()
+ref = "abcdefghijklmnopqrstuvwxyz"
+if s.isalpha():  # constraint
+    if len(set(s)) == 26:
+        print("1")
+    else:
+        print("".join(sorted(set(ref) - set(s))))
