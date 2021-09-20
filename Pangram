@@ -1,7 +1,44 @@
-s = input().lower()
-ref = "abcdefghijklmnopqrstuvwxyz"
-if s.isalpha():  # constraint
-    if len(set(s)) == 26:
-        print("1")
-    else:
-        print("".join(sorted(set(ref) - set(s))))
+import string
+
+# def Is_Pangram(s):
+#     ref = "abcdefghijklmnopqrstuvwxyz"
+#     for char in ref:
+#         if char not in s.lower():
+#             return "no"
+#     return "yes"
+# string = input()
+# # string = "the quick brown fox jumps over the lazy dog"
+# print(Is_Pangram(string))
+
+
+# ref = set(string.ascii_lowercase)
+# def Is_Pangram(s):
+#     return set(s.lower()) >= ref
+# string = input()
+# # string = "the quick brown fox jumps over the lazy dog"
+# print(Is_Pangram(string))
+
+
+# ref = set(string.ascii_lowercase)
+# def Is_Pangram(s):
+#     return not set(ref) - set(s)
+# string = input()
+# # string = "the quick brown fox jumps over the lazy dog"
+# print(Is_Pangram(string))
+
+
+# ref = set(string.ascii_lowercase)
+# def Is_Pangram(s):
+#     return sum(1 for i in set(s) if 96 < ord(i) <= 122 ) == 26
+# string = input()
+# # string = "the quick brown fox jumps over the lazy dog"
+# print(Is_Pangram(string))
+
+# Missing alphabets in sentence
+# ref = set(string.ascii_lowercase)
+# def Is_Pangram(s):
+#     return set(ref) - set(s)
+# string = input()
+# # string = "the quick brown fox jumps over the lazy dog"
+# if not len(Is_Pangram(string)) == 0:
+#     print("".join(sorted((Is_Pangram(string)))))
