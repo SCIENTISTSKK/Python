@@ -1,0 +1,30 @@
+"""All Possibilities in Coin Toss for N number of Coins"""
+
+
+def Possible(n, a):
+    if n >= 1:
+        Possible(n // 2, a)
+    z = n % 2
+    z = "H" if z == 0 else "T"
+    a.append(z)
+    return a
+
+
+def Comb(val):
+    for b in range(2 ** N):
+        A = Possible(b, [])
+        R = N - len(A)
+        c = []
+        for x in range(R):
+            c.append("H")
+        Temp = (c + A)
+        if len(Temp) > N:
+            val.append(Temp[abs(R):])
+        else:
+            val.append(Temp)
+    return val
+
+
+N = int(input())
+for c in Comb([]):
+    print(c)
