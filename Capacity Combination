@@ -1,0 +1,42 @@
+"""All Possibilities to fill a tank with large Capacity C with multiple cans with small Capacities """
+
+
+def Possible(n, a):
+    if n >= 1:
+        Possible(n // (C + 1), a)
+    z = n % (C + 1)
+    a.append(z)
+    return a
+
+
+def Comb(val):
+    for b in range((C + 1) ** N):
+        A = Possible(b, [])
+        R = N - len(A)
+        c = []
+        for x in range(R):
+            c.append(0)
+        Temp = (c + A)
+        if len(Temp) > N:
+            val.append(Temp[abs(R):])
+        else:
+            val.append(Temp)
+    return val
+
+
+def Calculation():
+    Sol = 0
+    for P in Com:
+        Total = 0
+        for e in range(N):
+            Total += P[e] * arr[e]
+        if Total == C:
+            Sol += 1
+    return Sol
+
+
+N = int(input())
+C = int(input())
+arr = [int(input()) for x in range(N)]
+Com = Comb([])
+print(Calculation())
