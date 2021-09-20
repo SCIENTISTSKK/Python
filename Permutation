@@ -1,0 +1,17 @@
+def nPr(lt):
+    if len(lt) == 0:
+        return[]
+    if len(lt) == 1:
+        return [lt]
+    l = []
+    for i in range(len(lt)):
+        m = lt[i]
+        rem = lt[:i]+lt[i+1:]
+        for P in nPr(rem):
+            l.append([m]+P)
+    return l
+
+
+data = list(input())
+for p in nPr(data):
+    print(p)
